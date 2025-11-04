@@ -38,32 +38,28 @@ def get_candidates(
     """
     Get filtered candidates
 
-    Implement:
-    1. Filter by search term (if provided)
-    2. Return all matching candidates
+    - Filter by search term (if provided)
+    - Return all matching candidates
     """
 
-    # Step 1: Load all candidates
     candidates = load_candidates()
 
-    # Step 2: Filter by search term (if provided)
-    # TODO: Implement search filtering here
-    # HINT: Check if 'search' exists, then filter candidates where search term
-    # appears in name, position, or company (case-insensitive)
-    #
-    # Example pseudocode:
-    # if search:
-    #     search_lower = search.lower()
-    #     candidates = [c for c in candidates
-    #                   if search_lower in c['name'].lower() or
-    #                      search_lower in c['position'].lower() or
-    #                      search_lower in c['company'].lower()]
 
-    # Placeholder return (replace this with your implementation)
+    if search:
+        search_lower = search.lower()
+        candidates = [
+            c for c in candidates
+            if search_lower in c.get("name", "").lower()
+            or search_lower in c.get("position", "").lower()
+            or search_lower in c.get("company", "").lower()
+        ]
+
+
     return {
-        "candidates": candidates,  # TODO: Return filtered candidates
-        "total": len(candidates)   # TODO: Use filtered total
+        "candidates": candidates,
+        "total": len(candidates)
     }
+
 
 
 if __name__ == "__main__":
