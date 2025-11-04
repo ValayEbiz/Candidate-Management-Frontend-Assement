@@ -2,36 +2,36 @@
 
 **TEMPLATE - Complete this form when submitting your work**
 
-**Candidate Name**: [Your Name]
-**Date**: [Date]
-**Time Spent**: [Approximate hours]
+**Candidate Name**: Valay Andhariya
+**Date**: 4 November
+**Time Spent**: 1.5 Hours
 
 ## What I Completed
 
 ### Frontend
-- [ ] Sidebar search input
-- [ ] Full Text Search toggle
-- [ ] Sort dropdown
-- [ ] Collapsible filter sections
-- [ ] Reset Filters button
-- [ ] Candidate list display
-- [ ] Candidate card components
-- [ ] Pagination component
-- [ ] Search filtering functionality
+- [✓] Sidebar search input
+- [✓] Full Text Search toggle
+- [✓] Sort dropdown
+- [✓] Collapsible filter sections
+- [✓] Reset Filters button
+- [✓] Candidate list display
+- [✓] Candidate card components
+- [✓] Pagination component
+- [✓] Search filtering functionality
 - [ ] Sort functionality
-- [ ] Pagination logic
+- [✓] Pagination logic
 
 ### Backend
-- [ ] GET /api/candidates endpoint
-- [ ] Filtering by search term
+- [✓] GET /api/candidates endpoint
+- [✓] Filtering by search term
 - [ ] Sorting logic
 - [ ] Pagination logic
-- [ ] CORS configuration
+- [✓] CORS configuration
 
 ### Styling
-- [ ] Visual accuracy to design
-- [ ] Hover states
-- [ ] Focus states
+- [✓] Visual accuracy to design
+- [✓] Hover states
+- [✓] Focus states
 - [ ] Responsive layout (if attempted)
 
 ## What I Would Do With More Time
@@ -58,6 +58,8 @@ Example:
 ## AI Tools Used
 
 [If you used any AI tools (ChatGPT, Copilot, Claude, etc.), note which ones and how]
+
+ChatGPT for basic Repitative Tasks
 
 Examples:
 - Used GitHub Copilot for autocompletion
