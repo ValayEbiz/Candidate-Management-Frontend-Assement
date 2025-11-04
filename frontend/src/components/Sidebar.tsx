@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { SearchInput } from './SearchInput';
+import { CollapsibleSection } from './CollapsibleSection';
 
 interface SidebarProps {
   searchValue: string;
@@ -47,24 +48,44 @@ export const Sidebar: React.FC<SidebarProps> = ({ searchValue, onSearchChange })
       </div>
 
       {/* Filter Sections - TODO: Candidates need to build these */}
-      <div className="mt-6">
+      <div className="mt-6 border-[#e1e1e1] border-t">
         {/* TODO: Add CollapsibleSection components for: */}
-        {/* - Application Type */}
-        {/* - Jobs */}
-        {/* - CRM */}
-        {/* - Profile Details */}
-        {/* - Source */}
-        {/* - Responsibility */}
-        {/* - Pipeline Tasks */}
-        {/* - Education */}
-        {/* See CollapsibleSection.tsx for a starting point */}
+        <CollapsibleSection title="Application Type" defaultOpen>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" className="accent-[#15372c]" /> Full-Time
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" className="accent-[#15372c]" /> Part-Time
+          </label>
+        </CollapsibleSection>
+        <CollapsibleSection title="Jobs">
+          <p className="text-gray-500 italic text-xs">No jobs yet</p>
+        </CollapsibleSection>
+        <CollapsibleSection title="CRM" />
+        <CollapsibleSection title="Profile Details" />
+        <CollapsibleSection title="Source" />
+        <CollapsibleSection title="Responsibility" />
+        <CollapsibleSection title="Pipeline Tasks" />
+        <CollapsibleSection title="Education" />
+
+
+
       </div>
 
       {/* Reset Filters Button */}
-      <button className="mt-6 w-full px-4 py-2 text-[#3574d6] text-[13.9px] font-light flex items-center justify-center gap-2 hover:underline">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+      <button className="mt-6 w-full py-2 text-[#3574d6] text-[13.9px] font-light flex items-center justify-start gap-2 hover:underline">
+        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_8_1560)">
+            <path d="M1.59229 7.23169L4.19755 11.1396L7.23702 7.6659" stroke="#2975CA" stroke-width="1.15789" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4.20243 11.1395C3.78038 5.58164 7.58927 1.75972 12.1433 1.59212C16.6964 1.42451 20.5244 4.97983 20.6903 9.53296C20.8605 14.087 17.3034 17.9141 12.7503 18.0808" stroke="#2975CA" stroke-width="1.15789" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <defs>
+            <clipPath id="clip0_8_1560">
+              <rect width="22" height="19.6842" fill="white" />
+            </clipPath>
+          </defs>
         </svg>
+
         <span>Reset Filters</span>
       </button>
     </aside>
